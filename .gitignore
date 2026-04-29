@@ -1,0 +1,68 @@
+# ============================================================
+# Vivado 生成目錄（可重新合成，不應提交）
+# ============================================================
+vivado_workspace/*.runs/
+vivado_workspace/*.cache/
+vivado_workspace/*.sim/
+vivado_workspace/*.hw/
+vivado_workspace/*.ip_user_files/
+vivado_workspace/*.str
+vivado_workspace/*.gen/
+
+# Vivado 日誌與備份
+vivado_workspace/vivado*.jou
+vivado_workspace/vivado*.log
+vivado_workspace/vivado*.backup.*
+vivado_workspace/ip_upgrade.log
+vivado_workspace/dfx_runtime.txt
+vivado_workspace/NA/
+
+# Bitstream 與匯出硬體（可重新生成）
+vivado_workspace/*.xsa
+*.bit
+*.ltx
+
+# Design Checkpoint（大型 binary，可由合成重新生成）
+*.dcp
+
+# Vivado 報告（可重新生成）
+*.rpt
+*.rpx
+
+# ============================================================
+# Vitis 生成目錄
+# ============================================================
+vitis_workspace/**/.metadata/
+vitis_workspace/**/.Xil/
+vitis_workspace/**/build/
+vitis_workspace/**/_ide/
+vitis_workspace/**/*.elf
+vitis_workspace/**/*.bit
+vitis_workspace/**/*.xsa
+vitis_workspace/**/RemoteSystemsTempFiles/
+
+# ============================================================
+# iverilog 模擬輸出
+# ============================================================
+sim/sim_out
+sim/*.vcd
+sim/*.lxt
+
+# ============================================================
+# Claude Code 本地設定（含個人 API 權限，不應提交）
+# ============================================================
+.claude/settings.local.json
+
+# ============================================================
+# 系統檔案
+# ============================================================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# ============================================================
+# 舊版目錄（Demo 移植前的原始目錄）
+# ============================================================
+Zybo-Z7-20-pcam-5c-2019.1/
