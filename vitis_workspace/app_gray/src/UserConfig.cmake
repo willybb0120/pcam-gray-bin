@@ -1,0 +1,16 @@
+set(USER_LINKER_SCRIPT "${CMAKE_SOURCE_DIR}/lscript.ld")
+
+set(USER_COMPILE_SOURCES
+"main.cc"
+"ov5640/OV5640.cpp"
+"platform/platform.c"
+"${CMAKE_CURRENT_SOURCE_DIR}/platform/platform.c"
+"${CMAKE_CURRENT_SOURCE_DIR}/ov5640/OV5640.cpp"
+)
+
+set(USER_INCLUDE_DIRECTORIES
+"."
+"${CMAKE_CURRENT_SOURCE_DIR}/ov5640"
+"${CMAKE_CURRENT_SOURCE_DIR}/hdmi"
+"${CMAKE_CURRENT_SOURCE_DIR}/platform"
+)

@@ -30,6 +30,22 @@ vivado_workspace/*.xsa
 *.rpx
 
 # ============================================================
+# Block Design 自動生成檔（保留 .bd 源碼，其餘從 .bd 重生）
+# ============================================================
+vivado_workspace/*.srcs/sources_1/bd/*/hdl/
+vivado_workspace/*.srcs/sources_1/bd/*/hw_handoff/
+vivado_workspace/*.srcs/sources_1/bd/*/sim/
+vivado_workspace/*.srcs/sources_1/bd/*/synth/
+vivado_workspace/*.srcs/sources_1/bd/*/ip/
+vivado_workspace/*.srcs/sources_1/bd/*/ipshared/
+vivado_workspace/*.srcs/sources_1/bd/mref/
+vivado_workspace/*.srcs/sources_1/bd/*/*.bxml
+vivado_workspace/*.srcs/sources_1/bd/*/*.veo
+vivado_workspace/*.srcs/sources_1/bd/*/*.vho
+vivado_workspace/*.srcs/sources_1/bd/*/*_sv.sv
+vivado_workspace/*.srcs/sources_1/bd/*/*_sv.sveo
+
+# ============================================================
 # Vitis 生成目錄
 # ============================================================
 vitis_workspace/**/.metadata/
@@ -40,6 +56,19 @@ vitis_workspace/**/*.elf
 vitis_workspace/**/*.bit
 vitis_workspace/**/*.xsa
 vitis_workspace/**/RemoteSystemsTempFiles/
+vitis_workspace/.rigel_lopper/
+
+# Vitis Platform 整體排除（75MB BSP 源碼可從 .xsa 重建）
+vitis_workspace/platform/
+
+# IDE/build 衍生檔
+vitis_workspace/**/compile_commands.json
+vitis_workspace/**/.clangd
+
+# ============================================================
+# 截圖與臨時檔
+# ============================================================
+*.png
 
 # ============================================================
 # iverilog 模擬輸出

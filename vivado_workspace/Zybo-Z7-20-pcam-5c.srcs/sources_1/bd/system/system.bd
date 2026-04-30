@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xCB1C850C50E04A37",
+      "boundary_crc": "0xCB1C850C877A5F1D",
       "device": "xc7z020clg400-1",
       "name": "system",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -46,7 +46,9 @@
       "v_axi4s_vid_out_0": "",
       "video_dynclk": "",
       "vtg": "",
-      "xlconcat_0": ""
+      "xlconcat_0": "",
+      "AXI_RGBToGray_0": "",
+      "rst_clk_wiz_0_150M": ""
     },
     "interface_ports": {
       "DDR": {
@@ -3194,7 +3196,7 @@
           "xbar": {
             "vlnv": "xilinx.com:ip:axi_crossbar:2.1",
             "ip_revision": "38",
-            "xci_name": "system_ps7_0_axi_periph_upgraded_ipi_imp_xbar_0",
+            "xci_name": "system_ps7_0_axi_periph_imp_xbar_0",
             "has_run_ip_tcl": "true",
             "parameters": {
               "NUM_MI": {
@@ -4181,6 +4183,18 @@
             "value": "3"
           }
         }
+      },
+      "AXI_RGBToGray_0": {
+        "vlnv": "xilinx.com:user:AXI_RGBToGray:1.0",
+        "ip_revision": "6",
+        "xci_name": "system_AXI_RGBToGray_0_0",
+        "has_run_ip_tcl": "true"
+      },
+      "rst_clk_wiz_0_150M": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "ip_revision": "17",
+        "xci_name": "system_rst_clk_wiz_0_150M_0",
+        "has_run_ip_tcl": "true"
       }
     },
     "interface_nets": {
@@ -4193,6 +4207,12 @@
       "AXI_GammaCorrection_0_m_axis_video": {
         "interface_ports": [
           "AXI_GammaCorrection_0/m_axis_video",
+          "AXI_RGBToGray_0/s_axis_video"
+        ]
+      },
+      "AXI_RGBToGray_0_m_axis_video": {
+        "interface_ports": [
+          "AXI_RGBToGray_0/m_axis_video",
           "axi_vdma_0/S_AXIS_S2MM"
         ]
       },
@@ -4372,7 +4392,8 @@
       "clk_wiz_0_locked": {
         "ports": [
           "clk_wiz_0/locked",
-          "rst_clk_wiz_0_50M/dcm_locked"
+          "rst_clk_wiz_0_50M/dcm_locked",
+          "rst_clk_wiz_0_150M/dcm_locked"
         ]
       },
       "clk_wiz_1_locked": {
@@ -4441,7 +4462,9 @@
           "axi_vdma_0/s_axis_s2mm_aclk",
           "processing_system7_0/S_AXI_HP0_ACLK",
           "processing_system7_0/S_AXI_HP2_ACLK",
-          "v_axi4s_vid_out_0/aclk"
+          "v_axi4s_vid_out_0/aclk",
+          "AXI_RGBToGray_0/StreamClk",
+          "rst_clk_wiz_0_150M/slowest_sync_clk"
         ]
       },
       "processing_system7_0_FCLK_CLK0": {
@@ -4455,13 +4478,20 @@
         "ports": [
           "processing_system7_0/FCLK_RESET0_N",
           "rst_clk_wiz_0_50M/ext_reset_in",
-          "rst_vid_clk_dyn/ext_reset_in"
+          "rst_vid_clk_dyn/ext_reset_in",
+          "rst_clk_wiz_0_150M/ext_reset_in"
         ]
       },
       "ref_clk_200": {
         "ports": [
           "clk_wiz_0/clk_out3",
           "MIPI_D_PHY_RX_0/RefClk"
+        ]
+      },
+      "rst_clk_wiz_0_150M_peripheral_aresetn": {
+        "ports": [
+          "rst_clk_wiz_0_150M/peripheral_aresetn",
+          "AXI_RGBToGray_0/sStreamReset_n"
         ]
       },
       "rst_clk_wiz_0_50M_interconnect_aresetn": {
