@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]C:\workspace-win\pcam-gray-bin\vitis_workspace\platform\export\platform\sw\boot\fsbl.elf
+	C:\workspace-win\pcam-gray-bin\vitis_workspace\app_gray\_ide\bitstream\system_wrapper_2_bin.bit
+	C:\workspace-win\pcam-gray-bin\vitis_workspace\app_gray\build\app_gray.elf
+}
