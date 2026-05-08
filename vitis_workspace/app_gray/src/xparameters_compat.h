@@ -45,4 +45,10 @@
 /* GammaCorrection base address unchanged */
 /* XPAR_AXI_GAMMACORRECTION_0_BASEADDR is already defined in xparameters.h */
 
+/* AXI_ImageModeSelect base address */
+#define IMAGE_MODE_SELECT_BASEADDR  XPAR_AXI_IMAGEMODESELECT_1_BASEADDR
+
+/* AXI GPIO (button) base address */
+#define BUTTON_GPIO_BASEADDR        XPAR_AXI_GPIO_0_BASEADDR
+
 #endif /* XPARAMETERS_COMPAT_H */

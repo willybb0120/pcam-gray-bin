@@ -232,6 +232,42 @@
             },
             "V5": {
                 "VT": "AC",
+                "BA": "0x40000000",
+                "HA": "0x40000FFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "Data",
+                "MX": "/processing_system7_0",
+                "MI": "M_AXI_GP0",
+                "MS": "SEG_AXI_ImageModeSelect_1_reg0",
+                "MV": "xilinx.com:ip:processing_system7:5.5",
+                "SX": "/AXI_ImageModeSelect_1",
+                "SI": "s_axil",
+                "SS": "reg0",
+                "SV": "local:local:AXI_ImageModeSelect:1.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V6": {
+                "VT": "AC",
+                "BA": "0x41200000",
+                "HA": "0x4120FFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "Data",
+                "MX": "/processing_system7_0",
+                "MI": "M_AXI_GP0",
+                "MS": "SEG_axi_gpio_0_Reg",
+                "MV": "xilinx.com:ip:processing_system7:5.5",
+                "SX": "/axi_gpio_0",
+                "SI": "S_AXI",
+                "SS": "Reg",
+                "SV": "xilinx.com:ip:axi_gpio:2.0",
+                "TM": "both",
+                "TU": "register"
+            },
+            "V7": {
+                "VT": "AC",
                 "BA": "0x43000000",
                 "HA": "0x4300FFFF",
                 "BP": "C_BASEADDR",
@@ -248,7 +284,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V6": {
+            "V8": {
                 "VT": "AC",
                 "BA": "0x43C00000",
                 "HA": "0x43C0FFFF",
@@ -266,7 +302,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V7": {
+            "V9": {
                 "VT": "AC",
                 "BA": "0x43C10000",
                 "HA": "0x43C1FFFF",
@@ -284,7 +320,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V8": {
+            "V10": {
                 "VT": "AC",
                 "BA": "0x43C20000",
                 "HA": "0x43C2FFFF",
@@ -302,7 +338,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V9": {
+            "V11": {
                 "VT": "AC",
                 "BA": "0x43C30000",
                 "HA": "0x43C3FFFF",
@@ -320,7 +356,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V10": {
+            "V12": {
                 "VT": "AC",
                 "BA": "0x43C40000",
                 "HA": "0x43C4FFFF",
@@ -385,6 +421,16 @@
             },
             {
                 "src": "V10",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V11",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V12",
                 "trg": "V2",
                 "EH": "2"
             }
