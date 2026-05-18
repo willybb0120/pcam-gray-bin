@@ -77,6 +77,12 @@ sim/sim_*
 sim/*.vcd
 sim/*.lxt
 
+# Footprint simulation outputs
+sim/**/sim_out
+sim/**/*.vvp
+sim/**/*.vcd
+sim/footprint/input.txt
+
 # ============================================================
 # Claude Code 本地設定（含個人 API 權限，不應提交）
 # ============================================================
